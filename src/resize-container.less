@@ -1,89 +1,82 @@
 .vrc-container {
   position: relative;
-  display: block;
-  box-sizing: border-box;
 }
 
-.vrc-handle {
-  position: absolute;
+.vrc-container > .vrc-handle {
   display: block;
+  position: absolute;
   z-index: 90;
   touch-action: none;
   user-select: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  background-color: rgba(64, 158, 255, 0.15);
-  border-radius: 2px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  background: transparent;
+}
 
-  &:hover {
-    background-color: rgba(64, 158, 255, 0.35);
-  }
+.vrc-container > .vrc-handle.vrc-handle--r {
+  cursor: e-resize;
+  width: 12px;
+  right: -6px;
+  top: 0;
+  height: 100%;
+}
 
-  &--r {
-    width: 12px;
-    right: -6px;
-    top: 0;
-    bottom: 0;
-    cursor: e-resize;
-  }
+.vrc-container > .vrc-handle.vrc-handle--rb {
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: -6px;
+  bottom: -6px;
+  z-index: 91;
+}
 
-  &--rb {
-    width: 12px;
-    height: 12px;
-    right: -6px;
-    bottom: -6px;
-    cursor: se-resize;
-    z-index: 91;
-  }
+.vrc-container > .vrc-handle.vrc-handle--b {
+  cursor: s-resize;
+  height: 12px;
+  bottom: -6px;
+  width: 100%;
+  left: 0;
+}
 
-  &--b {
-    height: 12px;
-    bottom: -6px;
-    left: 0;
-    right: 0;
-    cursor: s-resize;
-  }
+.vrc-container > .vrc-handle.vrc-handle--lb {
+  cursor: sw-resize;
+  width: 12px;
+  height: 12px;
+  left: -6px;
+  bottom: -6px;
+  z-index: 91;
+}
 
-  &--lb {
-    width: 12px;
-    height: 12px;
-    left: -6px;
-    bottom: -6px;
-    cursor: sw-resize;
-    z-index: 91;
-  }
+.vrc-container > .vrc-handle.vrc-handle--l {
+  cursor: w-resize;
+  width: 12px;
+  left: -6px;
+  height: 100%;
+  top: 0;
+}
 
-  &--l {
-    width: 12px;
-    left: -6px;
-    top: 0;
-    bottom: 0;
-    cursor: w-resize;
-  }
+.vrc-container > .vrc-handle.vrc-handle--lt {
+  cursor: nw-resize;
+  width: 12px;
+  height: 12px;
+  left: -6px;
+  top: -6px;
+  z-index: 91;
+}
 
-  &--lt {
-    width: 12px;
-    height: 12px;
-    left: -6px;
-    top: -6px;
-    cursor: nw-resize;
-    z-index: 91;
-  }
+.vrc-container > .vrc-handle.vrc-handle--t {
+  cursor: n-resize;
+  height: 12px;
+  top: -6px;
+  width: 100%;
+  left: 0;
+}
 
-  &--t {
-    height: 12px;
-    top: -6px;
-    left: 0;
-    right: 0;
-    cursor: n-resize;
-  }
-
-  &--rt {
-    width: 12px;
-    height: 12px;
-    right: -6px;
-    top: -6px;
-    cursor: ne-resize;
-    z-index: 91;
-  }
+.vrc-container > .vrc-handle.vrc-handle--rt {
+  cursor: ne-resize;
+  width: 12px;
+  height: 12px;
+  right: -6px;
+  top: -6px;
+  z-index: 91;
 }
