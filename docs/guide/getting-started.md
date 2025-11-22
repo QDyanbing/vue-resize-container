@@ -10,7 +10,7 @@ pnpm add vue-resize-container
 
 ## 使用方式
 
-<demo src="./demo.vue" title="基础用法" desc="通过 v-model 绑定尺寸、拖拽控制宽高">
+<demo src="./demo.vue" title="基础用法" desc="展开弹出层">
 </demo>
 
 ::: code-group
