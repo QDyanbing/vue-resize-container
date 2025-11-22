@@ -24,11 +24,11 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
+        "types": "./types/index.d.ts",
         "default": "./dist/vue-resize-container.js"
       },
       "require": {
-        "types": "./dist/index.d.ts",
+        "types": "./types/index.d.ts",
         "default": "./dist/vue-resize-container.cjs"
       },
       "default": "./dist/vue-resize-container.umd.cjs"
@@ -38,9 +38,10 @@
   "jsdelivr": "./dist/vue-resize-container.iife.js",
   "unpkg": "./dist/vue-resize-container.iife.js",
   "module": "./dist/vue-resize-container.js",
-  "types": "./dist/index.d.ts",
+  "types": "./types/index.d.ts",
   "files": [
     "dist",
+    "types",
     "LICENSE",
     "README.md"
   ],

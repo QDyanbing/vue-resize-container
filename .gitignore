@@ -4,7 +4,10 @@
 .temp
 *.log
 components.d.ts
-dist
+dist/*
+!dist/.gitkeep
+types/*
+!types/.gitkeep
 node_modules
 coverage
 .eslintcache
