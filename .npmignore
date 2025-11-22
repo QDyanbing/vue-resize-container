@@ -18,6 +18,9 @@ tsconfig.json
 tsconfig.*.json
 vite.config.ts
 uno.config.ts
+docs/
+.vitepress/
+.docs/
 .prettierrc
 .prettierignore
 .editorconfig

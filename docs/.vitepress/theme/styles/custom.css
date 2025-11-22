@@ -1,0 +1,8 @@
+:root {
+  --demo-radius: 12px;
+}
+
+.vp-doc table th:first-child,
+.vp-doc table td:first-child {
+  white-space: nowrap;
+}

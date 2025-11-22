@@ -6,7 +6,9 @@
 
 ```bash
 pnpm install
-pnpm dev
+pnpm dev             # 启动 VitePress 文档 + playground
+pnpm docs:build      # 生成静态文档站
+pnpm docs:preview    # 预览构建结果
 ```
 
 ## 构建与发布
@@ -23,10 +25,10 @@ pnpm preview  # 预览 UMD/IIFE 产物
 ```ts
 import { createApp } from 'vue';
 import App from './App.vue';
-import ResizeContainer from 'vue-resize-container';
+import { ResizeContainer } from 'vue-resize-container';
 
 const app = createApp(App);
-app.use(ResizeContainer);
+app.component('ResizeContainer', ResizeContainer);
 app.mount('#app');
 ```
 
@@ -35,8 +37,10 @@ app.mount('#app');
 ```ts
 import Vue from 'vue';
 import VueCompositionAPI from '@vue/composition-api';
-import VueResizeContainer from 'vue-resize-container';
+import { ResizeContainer } from 'vue-resize-container';
 
 Vue.use(VueCompositionAPI);
-Vue.use(VueResizeContainer);
+Vue.component('ResizeContainer', ResizeContainer);
 ```
+
+> 如需一次性注册所有导出的组件，也保留了 app.use(VueResizeContainer) 的方式。
