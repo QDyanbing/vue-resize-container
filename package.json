@@ -1,0 +1,60 @@
+{
+  "name": "vue-resize-container",
+  "version": "0.0.1",
+  "description": "A vue component that allows to resize",
+  "keywords": [
+    "vue",
+    "vue2.x",
+    "vue3.x",
+    "resize",
+    "resize-container"
+  ],
+  "homepage": "https://github.com/QDyanbing/vue-resize-container#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QDyanbing/vue-resize-container.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "gaoyanbing",
+    "email": "yanbing.gao@aliyun.com"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/vue-resize-container.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/vue-resize-container.cjs"
+      },
+      "default": "./dist/vue-resize-container.umd.cjs"
+    }
+  },
+  "main": "./dist/vue-resize-container.umd.cjs",
+  "jsdelivr": "./dist/vue-resize-container.iife.js",
+  "unpkg": "./dist/vue-resize-container.iife.js",
+  "module": "./dist/vue-resize-container.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "format": "prettier --cache --write .",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-packagejson": "^2.5.19"
+  },
+  "volta": {
+    "node": "^22.14.0",
+    "pnpm": "^8.6.11"
+  }
+}
