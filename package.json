@@ -47,16 +47,25 @@
   "scripts": {
     "format": "prettier --cache --write .",
     "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm lint:eslint && pnpm lint:stylelint",
+    "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx,.vue src --max-warnings=0 --no-error-on-unmatched-pattern",
+    "lint:stylelint": "stylelint \"src/**/*.{css,scss,less,vue}\" --allow-empty-input",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-vue": "^10.6.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
+    "postcss-html": "^1.8.0",
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.3.0",
-    "prettier-plugin-packagejson": "^2.5.19"
+    "prettier-plugin-packagejson": "^2.5.19",
+    "stylelint": "^16.26.0"
   },
   "volta": {
     "node": "22.14.0",

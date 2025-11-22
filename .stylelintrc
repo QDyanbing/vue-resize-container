@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json.schemastore.org/stylelintrc",
+  "customSyntax": "postcss-html",
+  "rules": {
+    "alpha-value-notation": "number",
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "blockless-after-same-name-blockless",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
+    "block-opening-brace-newline-after": [
+      "always-multi-line"
+    ],
+    "block-opening-brace-space-before": "always",
+    "block-closing-brace-newline-after": [
+      "always"
+    ],
+    "block-closing-brace-space-before": [
+      "always-single-line",
+      "always-multi-line"
+    ],
+    "block-no-empty": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-no-invalid-hex": true,
+    "comment-whitespace-inside": "always",
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": [
+          "consecutive-duplicates-with-different-values"
+        ]
+      }
+    ],
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-block-semicolon-newline-after": [
+      "always-multi-line"
+    ],
+    "declaration-block-semicolon-space-after": [
+      "always-single-line"
+    ],
+    "declaration-block-semicolon-space-before": "never",
+    "declaration-colon-space-after": "always-single-line",
+    "declaration-colon-space-before": "never",
+    "font-family-no-duplicate-names": true,
+    "function-url-no-scheme-relative": true,
+    "function-url-quotes": "always",
+    "indentation": 2,
+    "length-zero-no-unit": true,
+    "linebreaks": "unix",
+    "media-feature-parentheses-space-inside": "never",
+    "number-max-precision": 6,
+    "number-leading-zero": "always",
+    "property-case": "lower",
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreSelectors": [
+          ":global",
+          ":local"
+        ]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
+    "selector-attribute-quotes": "always",
+    "selector-class-pattern": [
+      "^[a-z0-9\\-]+$",
+      {
+        "message": "Class名统一用 kebab-case"
+      }
+    ],
+    "selector-max-id": 0,
+    "selector-max-universal": 1,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global",
+          "local",
+          "deep"
+        ]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "v-deep"
+        ]
+      }
+    ],
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": [
+          "page",
+          "view"
+        ]
+      }
+    ],
+    "string-no-newline": true,
+    "string-quotes": "double",
+    "unit-no-unknown": true,
+    "value-keyword-case": "lower",
+    "value-list-comma-space-after": "always-single-line",
+    "value-list-comma-newline-after": "always-multi-line"
+  }
+}
+

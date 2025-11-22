@@ -1,0 +1,134 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "extraFileExtensions": [
+      ".vue"
+    ]
+  },
+  "ignorePatterns": [
+    "dist",
+    "node_modules",
+    "coverage",
+    "*.log"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "no-debugger": "warn",
+    "eqeqeq": [
+      "error",
+      "smart"
+    ],
+    "prefer-const": "warn",
+    "prefer-template": "warn",
+    "no-unused-vars": [
+      "off"
+    ],
+    "no-empty-function": "off",
+    "object-shorthand": [
+      "warn",
+      "always"
+    ],
+    "no-duplicate-imports": "error",
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
+    "curly": [
+      "error",
+      "multi-line"
+    ],
+    "vue/multi-word-component-names": "off",
+    "vue/no-v-html": "off",
+    "vue/no-mutating-props": "error",
+    "vue/require-default-prop": "off",
+    "vue/require-explicit-emits": "warn",
+    "vue/no-unused-properties": [
+      "warn",
+      {
+        "groups": [
+          "props",
+          "data",
+          "computed",
+          "methods",
+          "setup"
+        ]
+      }
+    ],
+    "vue/component-name-in-template-casing": [
+      "warn",
+      "kebab-case",
+      {
+        "registeredComponentsOnly": false
+      }
+    ],
+    "vue/html-self-closing": [
+      "warn",
+      {
+        "html": {
+          "void": "always",
+          "normal": "never",
+          "component": "always"
+        },
+        "svg": "always",
+        "math": "always"
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      {
+        "fixStyle": "inline-type-imports"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/array-type": [
+      "warn",
+      {
+        "default": "array-simple"
+      }
+    ],
+    "@typescript-eslint/consistent-indexed-object-style": [
+      "warn",
+      "record"
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/ban-ts-comment": [
+      "warn",
+      {
+        "ts-ignore": "allow-with-description"
+      }
+    ]
+  }
+}
+
