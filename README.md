@@ -7,6 +7,7 @@
 ```bash
 pnpm install
 pnpm dev             # 启动 VitePress 文档 + playground
+pnpm watch           # 监听组件源码并输出 dist
 pnpm docs:build      # 生成静态文档站
 pnpm docs:preview    # 预览构建结果
 ```
