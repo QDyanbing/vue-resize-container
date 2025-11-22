@@ -49,10 +49,15 @@ export default defineComponent({
       handleUp,
       syncDimensions,
       emitEvent,
+      setupDragElements,
+      updateCalcMap,
     } = useResizable(props, (event, payload) => emit(event, payload), rootRef);
 
     onMounted(() => {
       syncDimensions();
+      setupDragElements(props.dragSelector);
+      updateCalcMap(props.disableAttributes);
+      setMaximize(props.maximize);
       document.documentElement.addEventListener('mousemove', handleMove, true);
       document.documentElement.addEventListener('mousedown', handleDown, true);
       document.documentElement.addEventListener('mouseup', handleUp, true);
