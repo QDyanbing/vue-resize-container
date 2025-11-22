@@ -1,0 +1,9 @@
+{
+  "*.{js,ts,jsx,tsx,vue}": [
+    "prettier --cache --write"
+  ],
+  "*.{json,md,yaml,yml}": [
+    "prettier --cache --write"
+  ]
+}
+
