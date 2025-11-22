@@ -1,0 +1,89 @@
+.vrc-container {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.vrc-handle {
+  position: absolute;
+  display: block;
+  z-index: 90;
+  touch-action: none;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: rgba(64, 158, 255, 0.15);
+  border-radius: 2px;
+
+  &:hover {
+    background-color: rgba(64, 158, 255, 0.35);
+  }
+
+  &--r {
+    width: 12px;
+    right: -6px;
+    top: 0;
+    bottom: 0;
+    cursor: e-resize;
+  }
+
+  &--rb {
+    width: 12px;
+    height: 12px;
+    right: -6px;
+    bottom: -6px;
+    cursor: se-resize;
+    z-index: 91;
+  }
+
+  &--b {
+    height: 12px;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    cursor: s-resize;
+  }
+
+  &--lb {
+    width: 12px;
+    height: 12px;
+    left: -6px;
+    bottom: -6px;
+    cursor: sw-resize;
+    z-index: 91;
+  }
+
+  &--l {
+    width: 12px;
+    left: -6px;
+    top: 0;
+    bottom: 0;
+    cursor: w-resize;
+  }
+
+  &--lt {
+    width: 12px;
+    height: 12px;
+    left: -6px;
+    top: -6px;
+    cursor: nw-resize;
+    z-index: 91;
+  }
+
+  &--t {
+    height: 12px;
+    top: -6px;
+    left: 0;
+    right: 0;
+    cursor: n-resize;
+  }
+
+  &--rt {
+    width: 12px;
+    height: 12px;
+    right: -6px;
+    top: -6px;
+    cursor: ne-resize;
+    z-index: 91;
+  }
+}

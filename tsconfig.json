@@ -4,8 +4,8 @@
     "outDir": "dist",
     "sourceMap": false,
     "target": "ES2022",
-    "module": "ES2022",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "allowJs": false,
     "noUnusedLocals": true,
     "strictNullChecks": true,
@@ -19,14 +19,14 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
-    "types": [],
+    "types": ["node", "vite/client"],
     "skipLibCheck": true,
     "emitDeclarationOnly": true,
     "declarationDir": "types",
-    "rootDir": ".",
+    "rootDir": "src",
     "paths": {
       "@/*": ["src/*"],
-      "vue-draggable-plus": ["src/index.ts"]
+      "vue-resize-container": ["src/index.ts"]
     }
   },
   "include": ["src/**/*"],

@@ -16,6 +16,8 @@ node_modules/
 pnpm-lock.yaml
 tsconfig.json
 tsconfig.*.json
+vite.config.ts
+uno.config.ts
 .prettierrc
 .prettierignore
 .editorconfig
