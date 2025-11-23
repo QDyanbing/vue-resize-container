@@ -1,9 +1,6 @@
 import { applyPlugins } from '@ruabick/md-demo-plugins';
-import { genTemp } from '@ruabick/vite-plugin-gen-temp';
 import { resolve } from 'node:path';
 import { defineConfig } from 'vitepress';
-
-const isProd = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
   title: 'Vue Resize Container',
@@ -26,9 +23,9 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: isProd ? [genTemp()] : [],
     resolve: {
       alias: {
+        '@': resolve(__dirname, '../../src'),
         'vue-resize-container': resolve(__dirname, '../../src'),
       },
     },

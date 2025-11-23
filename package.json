@@ -51,18 +51,16 @@
     "build:types": "vue-tsc -p tsconfig.json --emitDeclarationOnly",
     "clean": "rimraf \"dist/*\" \"types/*\"",
     "dev": "vitepress dev docs --host",
-    "watch": "vite build --watch",
-    "docs:build": "pnpm docs:scan && vitepress build .docs",
-    "docs:dev": "vitepress dev docs --host",
-    "docs:preview": "pnpm docs:scan && vitepress preview .docs",
-    "docs:scan": "initial-scan docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
     "format": "prettier --cache --write .",
     "preinstall": "npx only-allow pnpm",
     "lint": "pnpm lint:eslint && pnpm lint:stylelint",
     "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx,.vue src --max-warnings=0 --no-error-on-unmatched-pattern",
     "lint:stylelint": "stylelint \"src/**/*.{css,scss,less,vue}\" --allow-empty-input",
     "prepare": "husky install",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "watch": "vite build --watch"
   },
   "dependencies": {
     "vue-demi": "^0.14.10"
