@@ -1,6 +1,6 @@
 {
   "name": "vue-resize-container",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A vue component that allows to resize",
   "keywords": [
     "vue",
