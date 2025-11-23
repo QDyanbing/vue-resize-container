@@ -64,9 +64,6 @@
     "release": "np --no-tests",
     "watch": "vite build --watch"
   },
-  "dependencies": {
-    "vue-demi": "^0.14.10"
-  },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
@@ -101,12 +98,9 @@
     "vite-plugin-dts": "^4.5.4",
     "vitepress": "^1.5.0",
     "vue": "^3.5.24",
+    "vue-demi": "^0.14.10",
     "vue-eslint-parser": "^10.2.0",
     "vue-tsc": "^3.1.4"
-  },
-  "peerDependencies": {
-    "@vue/composition-api": "^1.7.0",
-    "vue": "^2.7.0 || ^3.3.0"
   },
   "peerDependenciesMeta": {
     "@vue/composition-api": {
