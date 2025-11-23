@@ -1,6 +1,6 @@
 {
   "name": "vue-resize-container",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A vue component that allows to resize",
   "keywords": [
     "vue",
@@ -76,8 +76,8 @@
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^8.47.0",
     "@typescript-eslint/parser": "^8.47.0",
-    "@unocss/reset": "^66.5.9",
     "@unocss/preset-wind3": "^66.5.9",
+    "@unocss/reset": "^66.5.9",
     "@vitejs/plugin-vue": "^6.0.2",
     "cross-env": "^7.0.3",
     "eslint": "^9.39.1",
