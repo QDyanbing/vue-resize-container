@@ -53,7 +53,7 @@
     "dev": "vitepress dev docs --host",
     "docs:build": "vitepress build docs",
     "docs:deploy": "pnpm docs:build && gh-pages -d docs/.vitepress/dist -b gh-pages -m \"docs: update\"",
-    "docs:preview": "vitepress preview docs",
+    "docs:preview": "cross-env DOCS_ENV=preview vitepress build docs && vitepress preview docs",
     "format": "prettier --cache --write .",
     "preinstall": "npx only-allow pnpm",
     "lint": "pnpm lint:eslint && pnpm lint:stylelint",
@@ -77,7 +77,9 @@
     "@typescript-eslint/eslint-plugin": "^8.47.0",
     "@typescript-eslint/parser": "^8.47.0",
     "@unocss/reset": "^66.5.9",
+    "@unocss/preset-wind3": "^66.5.9",
     "@vitejs/plugin-vue": "^6.0.2",
+    "cross-env": "^7.0.3",
     "eslint": "^9.39.1",
     "eslint-plugin-vue": "^10.6.0",
     "gh-pages": "^6.1.1",
@@ -115,7 +117,7 @@
     "pnpm": "8.6.11"
   },
   "np": {
-    "branch": "release",
+    "branch": "master",
     "publishRegistry": "https://registry.npmjs.org/"
   }
 }

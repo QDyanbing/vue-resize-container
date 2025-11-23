@@ -2,10 +2,10 @@ import { applyPlugins } from '@ruabick/md-demo-plugins';
 import { resolve } from 'node:path';
 import { defineConfig } from 'vitepress';
 
-const isProd = process.env.NODE_ENV === 'production';
+const isPreviewBuild = process.env.DOCS_ENV === 'preview';
 
-export default defineConfig({
-  base: isProd ? '/vue-resize-container/' : '/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' && !isPreviewBuild ? '/vue-resize-container/' : '/',
   title: 'Vue Resize Container',
   description: '可同时支持 Vue 2/3 的拖拽缩放容器组件',
   themeConfig: {
@@ -36,4 +36,4 @@ export default defineConfig({
       port: 4330,
     },
   },
-});
+}));
