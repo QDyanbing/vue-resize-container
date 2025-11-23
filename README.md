@@ -17,6 +17,7 @@ pnpm docs:preview    # 预览构建结果
 ```bash
 pnpm build    # 生成 dist 与 types
 pnpm preview  # 预览 UMD/IIFE 产物
+pnpm release  # 通过 np 执行版本、tag、发布
 ```
 
 ## 使用示例
