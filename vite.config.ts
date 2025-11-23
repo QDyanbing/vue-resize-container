@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import UnoCSS from 'unocss/vite';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 const fileNameMap: Record<string, string> = {
   es: 'vue-resize-container.js',
@@ -21,6 +22,7 @@ export default defineConfig({
       }),
     }),
     UnoCSS(),
+    cssInjectedByJsPlugin(),
   ],
   server: {
     port: 5230,

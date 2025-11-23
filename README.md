@@ -8,6 +8,7 @@
 - 支持八个方向的缩放、内容拖拽、最大化、限制在父级内移动、禁止某些维度计算。
 - 提供 `pnpm dev` 启动的文档 + playground，改动 `src` 或 `docs` 都会热更新。
 - 使用 Vite lib mode + `vite-plugin-dts` 构建，可产出 ES/CJS/UMD/IIFE 与类型定义。
+- 样式在运行时自动注入，安装组件后无需再单独引入 CSS。
 
 ## 开发环境
 
@@ -16,16 +17,16 @@
 
 常用脚本：
 
-| 命令 | 说明 |
-| --- | --- |
-| `pnpm dev` | 启动 VitePress 文档与 playground，实时预览组件 |
-| `pnpm watch` | 监听 `src`，自动增量构建到 `dist`（开发外部项目时使用） |
-| `pnpm docs:build` | 生成静态文档站（用于 GitHub Pages） |
-| `pnpm docs:preview` | 以本地 base 预览文档构建结果 |
-| `pnpm build` | 清理并产出 `dist` 与 `types` |
-| `pnpm preview` | 本地预览打包后的 UMD/IIFE |
-| `pnpm release` | 通过 `np` 执行 version bump、tag、发布 npm |
-| `pnpm docs:deploy` | 构建并推送文档到 `gh-pages` |
+| 命令                | 说明                                                    |
+| ------------------- | ------------------------------------------------------- |
+| `pnpm dev`          | 启动 VitePress 文档与 playground，实时预览组件          |
+| `pnpm watch`        | 监听 `src`，自动增量构建到 `dist`（开发外部项目时使用） |
+| `pnpm docs:build`   | 生成静态文档站（用于 GitHub Pages）                     |
+| `pnpm docs:preview` | 以本地 base 预览文档构建结果                            |
+| `pnpm build`        | 清理并产出 `dist` 与 `types`                            |
+| `pnpm preview`      | 本地预览打包后的 UMD/IIFE                               |
+| `pnpm release`      | 通过 `np` 执行 version bump、tag、发布 npm              |
+| `pnpm docs:deploy`  | 构建并推送文档到 `gh-pages`                             |
 
 ## 使用方式
 
@@ -61,7 +62,7 @@ Vue.component('ResizeContainer', ResizeContainer);
 ## 发布流程
 
 1. `pnpm build` + `pnpm lint` 确认组件通过检查。
-2. `pnpm release` 调用 `np`：自动跑测试（已关闭）、更新版本、打 tag、发布 npm（需先 `npm login` 官方 registry）。  
+2. `pnpm release` 调用 `np`：自动跑测试（已关闭）、更新版本、打 tag、发布 npm（需先 `npm login` 官方 registry）。
    - 发布命令固定在 `master` 分支执行，np 会推送 tag 并发布包。
 3. `pnpm docs:deploy` 将最新文档推送到 `gh-pages`，供 GitHub Pages 使用。
 
