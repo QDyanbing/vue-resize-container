@@ -10,9 +10,7 @@
     "declaration-block-no-duplicate-properties": [
       true,
       {
-        "ignore": [
-          "consecutive-duplicates-with-different-values"
-        ]
+        "ignore": ["consecutive-duplicates-with-different-values"]
       }
     ],
     "declaration-block-no-redundant-longhand-properties": true,
@@ -24,21 +22,14 @@
     "property-no-unknown": [
       true,
       {
-        "ignoreSelectors": [
-          ":global",
-          ":local"
-        ]
+        "ignoreSelectors": [":global", ":local"]
       }
     ],
     "rule-empty-line-before": [
       "always-multi-line",
       {
-        "except": [
-          "first-nested"
-        ],
-        "ignore": [
-          "after-comment"
-        ]
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
       }
     ],
     "selector-attribute-quotes": "always",
@@ -53,28 +44,19 @@
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        "ignorePseudoClasses": [
-          "global",
-          "local",
-          "deep"
-        ]
+        "ignorePseudoClasses": ["global", "local", "deep"]
       }
     ],
     "selector-pseudo-element-no-unknown": [
       true,
       {
-        "ignorePseudoElements": [
-          "v-deep"
-        ]
+        "ignorePseudoElements": ["v-deep"]
       }
     ],
     "selector-type-no-unknown": [
       true,
       {
-        "ignoreTypes": [
-          "page",
-          "view"
-        ]
+        "ignoreTypes": ["page", "view"]
       }
     ],
     "string-no-newline": true,
@@ -82,4 +64,3 @@
     "value-keyword-case": "lower"
   }
 }
-

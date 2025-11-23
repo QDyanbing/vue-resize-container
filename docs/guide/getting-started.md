@@ -16,22 +16,22 @@ pnpm add vue-resize-container
 ::: code-group
 
 ```ts [Vue 3]
-import { createApp } from 'vue'
-import App from './App.vue'
-import { ResizeContainer } from 'vue-resize-container'
+import { createApp } from 'vue';
+import App from './App.vue';
+import { ResizeContainer } from 'vue-resize-container';
 
-const app = createApp(App)
-app.component('ResizeContainer', ResizeContainer)
-app.mount('#app')
+const app = createApp(App);
+app.component('ResizeContainer', ResizeContainer);
+app.mount('#app');
 ```
 
 ```ts [Vue 2.7]
-import Vue from 'vue'
-import VueCompositionAPI from '@vue/composition-api'
-import { ResizeContainer } from 'vue-resize-container'
+import Vue from 'vue';
+import VueCompositionAPI from '@vue/composition-api';
+import { ResizeContainer } from 'vue-resize-container';
 
-Vue.use(VueCompositionAPI)
-Vue.component('ResizeContainer', ResizeContainer)
+Vue.use(VueCompositionAPI);
+Vue.component('ResizeContainer', ResizeContainer);
 ```
 
 :::

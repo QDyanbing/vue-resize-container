@@ -1,5 +1,5 @@
-import tseslint from 'typescript-eslint';
 import vue from 'eslint-plugin-vue';
+import tseslint from 'typescript-eslint';
 import vueParser from 'vue-eslint-parser';
 
 const vueRecommended = vue.configs['flat/recommended'];
@@ -68,10 +68,7 @@ export default tseslint.config(
           math: 'always',
         },
       ],
-      '@typescript-eslint/consistent-type-imports': [
-        'warn',
-        { fixStyle: 'inline-type-imports' },
-      ],
+      '@typescript-eslint/consistent-type-imports': ['warn', { fixStyle: 'inline-type-imports' }],
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -84,11 +81,7 @@ export default tseslint.config(
       '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/ban-ts-comment': [
-        'warn',
-        { 'ts-ignore': 'allow-with-description' },
-      ],
+      '@typescript-eslint/ban-ts-comment': ['warn', { 'ts-ignore': 'allow-with-description' }],
     },
   },
 );
-
