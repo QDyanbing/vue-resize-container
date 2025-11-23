@@ -113,6 +113,7 @@
     "pnpm": "8.6.11"
   },
   "np": {
-    "branch": "release"
+    "branch": "release",
+    "publishRegistry": "https://registry.npmjs.org/"
   }
 }
