@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json.schemastore.org/stylelintrc",
+  "customSyntax": "postcss-html",
+  "rules": {
+    "alpha-value-notation": "number",
+    "block-no-empty": true,
+    "color-hex-length": "short",
+    "color-no-invalid-hex": true,
+    "comment-whitespace-inside": "always",
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates-with-different-values"]
+      }
+    ],
+    "declaration-block-no-redundant-longhand-properties": true,
+    "font-family-no-duplicate-names": true,
+    "function-url-no-scheme-relative": true,
+    "function-url-quotes": "always",
+    "length-zero-no-unit": true,
+    "number-max-precision": 6,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreSelectors": [":global", ":local"]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
+    "selector-attribute-quotes": "always",
+    "selector-class-pattern": [
+      "^[a-z0-9\\-]+$",
+      {
+        "message": "Class名统一用 kebab-case"
+      }
+    ],
+    "selector-max-id": 0,
+    "selector-max-universal": 1,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global", "local", "deep"]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["v-deep"]
+      }
+    ],
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": ["page", "view"]
+      }
+    ],
+    "string-no-newline": true,
+    "unit-no-unknown": true,
+    "value-keyword-case": "lower"
+  }
+}

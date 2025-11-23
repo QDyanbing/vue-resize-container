@@ -1,0 +1,40 @@
+# Sources and samples that should not ship
+src/
+demo/
+example/
+stories/
+tests/
+__tests__/
+coverage/
+
+# Local dependencies and caches
+node_modules/
+.pnpm-store/
+*.tsbuildinfo
+
+# Tooling configs not required by consumers
+pnpm-lock.yaml
+tsconfig.json
+tsconfig.*.json
+vite.config.ts
+uno.config.ts
+docs/
+.vitepress/
+.docs/
+.prettierrc
+.prettierignore
+.editorconfig
+.eslintrc*
+
+# Repo metadata and IDE settings
+.git
+.gitignore
+.gitattributes
+.vscode/
+.idea/
+
+# Miscellaneous OS/artifact noise
+.DS_Store
+Thumbs.db
+*.log
+*.tgz

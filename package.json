@@ -1,0 +1,123 @@
+{
+  "name": "vue-resize-container",
+  "version": "0.0.1",
+  "description": "A vue component that allows to resize",
+  "keywords": [
+    "vue",
+    "vue2.x",
+    "vue3.x",
+    "resize",
+    "resize-container"
+  ],
+  "homepage": "https://github.com/QDyanbing/vue-resize-container#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QDyanbing/vue-resize-container.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "gaoyanbing",
+    "email": "yanbing.gao@aliyun.com"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./types/index.d.ts",
+        "default": "./dist/vue-resize-container.js"
+      },
+      "require": {
+        "types": "./types/index.d.ts",
+        "default": "./dist/vue-resize-container.cjs"
+      },
+      "default": "./dist/vue-resize-container.umd.cjs"
+    }
+  },
+  "main": "./dist/vue-resize-container.umd.cjs",
+  "jsdelivr": "./dist/vue-resize-container.iife.js",
+  "unpkg": "./dist/vue-resize-container.iife.js",
+  "module": "./dist/vue-resize-container.js",
+  "types": "./types/index.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "pnpm clean && pnpm build:types && pnpm build:lib",
+    "build:lib": "vite build",
+    "build:types": "vue-tsc -p tsconfig.json --emitDeclarationOnly",
+    "clean": "rimraf \"dist/*\" \"types/*\"",
+    "dev": "vitepress dev docs --host",
+    "docs:build": "vitepress build docs",
+    "docs:deploy": "pnpm docs:build && gh-pages -d docs/.vitepress/dist -b gh-pages -m \"docs: update\"",
+    "docs:preview": "cross-env DOCS_ENV=preview vitepress build docs && vitepress preview docs",
+    "format": "prettier --cache --write .",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm lint:eslint && pnpm lint:stylelint",
+    "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx,.vue src --max-warnings=0 --no-error-on-unmatched-pattern",
+    "lint:stylelint": "stylelint \"src/**/*.{css,scss,less,vue}\" --allow-empty-input",
+    "prepare": "husky install",
+    "preview": "vite preview",
+    "release": "np --no-tests",
+    "watch": "vite build --watch"
+  },
+  "dependencies": {
+    "vue-demi": "^0.14.10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@ruabick/md-demo-plugins": "^0.3.3",
+    "@ruabick/vite-plugin-gen-temp": "^0.3.3",
+    "@ruabick/vitepress-demo-block": "^0.3.3",
+    "@types/node": "^24.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "@unocss/reset": "^66.5.9",
+    "@unocss/preset-wind3": "^66.5.9",
+    "@vitejs/plugin-vue": "^6.0.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.39.1",
+    "eslint-plugin-vue": "^10.6.0",
+    "gh-pages": "^6.1.1",
+    "husky": "^9.1.7",
+    "less": "^4.4.2",
+    "lint-staged": "^16.2.7",
+    "np": "^10.2.0",
+    "postcss-html": "^1.8.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-packagejson": "^2.5.19",
+    "rimraf": "^6.1.2",
+    "stylelint": "^16.26.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.47.0",
+    "unocss": "^66.5.9",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vitepress": "^1.5.0",
+    "vue": "^3.5.24",
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^3.1.4"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.7.0",
+    "vue": "^2.7.0 || ^3.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "volta": {
+    "node": "22.14.0",
+    "pnpm": "8.6.11"
+  },
+  "np": {
+    "branch": "master",
+    "publishRegistry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,147 @@
+.vrc-container {
+  position: relative;
+
+  .vrc-handle {
+    position: absolute;
+    z-index: 90;
+    touch-action: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: transparent;
+      transition: background-color 0.2s ease;
+    }
+
+    &:hover::after {
+      background-color: #409eff;
+    }
+
+    &.vrc-handle--r {
+      cursor: e-resize;
+      width: 12px;
+      right: -6px;
+      top: 0;
+      height: 100%;
+
+      &::after {
+        left: 5px;
+        right: 5px;
+        top: 0;
+        bottom: 0;
+      }
+    }
+
+    &.vrc-handle--rb {
+      cursor: se-resize;
+      width: 12px;
+      height: 12px;
+      right: -6px;
+      bottom: -6px;
+      z-index: 91;
+
+      &::after {
+        width: 6px;
+        height: 6px;
+        right: 3px;
+        bottom: 3px;
+      }
+    }
+
+    &.vrc-handle--b {
+      cursor: s-resize;
+      height: 12px;
+      bottom: -6px;
+      width: 100%;
+      left: 0;
+
+      &::after {
+        top: 5px;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.vrc-handle--lb {
+      cursor: sw-resize;
+      width: 12px;
+      height: 12px;
+      left: -6px;
+      bottom: -6px;
+      z-index: 91;
+
+      &::after {
+        width: 6px;
+        height: 6px;
+        left: 3px;
+        bottom: 3px;
+      }
+    }
+
+    &.vrc-handle--l {
+      cursor: w-resize;
+      width: 12px;
+      left: -6px;
+      height: 100%;
+      top: 0;
+
+      &::after {
+        left: 5px;
+        right: 5px;
+        top: 0;
+        bottom: 0;
+      }
+    }
+
+    &.vrc-handle--lt {
+      cursor: nw-resize;
+      width: 12px;
+      height: 12px;
+      left: -6px;
+      top: -6px;
+      z-index: 91;
+
+      &::after {
+        width: 6px;
+        height: 6px;
+        left: 3px;
+        top: 3px;
+      }
+    }
+
+    &.vrc-handle--t {
+      cursor: n-resize;
+      height: 12px;
+      top: -6px;
+      width: 100%;
+      left: 0;
+
+      &::after {
+        top: 5px;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.vrc-handle--rt {
+      cursor: ne-resize;
+      width: 12px;
+      height: 12px;
+      right: -6px;
+      top: -6px;
+      z-index: 91;
+
+      &::after {
+        width: 6px;
+        height: 6px;
+        right: 3px;
+        top: 3px;
+      }
+    }
+  }
+}

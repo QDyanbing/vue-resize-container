@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+if pnpm exec commitlint --color false --edit "$1" >/dev/null 2>&1; then
+  exit 0
+fi
+
+cat >&2 <<'EOF'
+✘ 提交信息不符合约定格式，请使用：
+  <type>(<scope>): <subject>
+
+type 说明：
+  feat      新功能
+  fix       bug 修复
+  chore     构建/脚本/依赖
+  docs      文档或注释
+  style     代码格式、样式调整
+  refactor  代码重构（无新特性或修复）
+  perf      性能优化
+  test      测试用例
+  build     构建系统或外部依赖
+  ci        CI/CD 配置
+  revert    回滚提交
+
+例如：
+  feat: 新增拖拽容器
+  fix(resize): 修复初始宽度
+EOF
+
+exit 1

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/commitlintrc",
+  "extends": [
+    "@commitlint/config-conventional"
+  ],
+  "rules": {
+    "type-empty": [
+      2,
+      "never",
+      "请添加提交类型前缀（如 feat/fix/chore）"
+    ],
+    "subject-empty": [
+      2,
+      "never",
+      "请补充一句简短的改动描述"
+    ]
+  }
+}
+
