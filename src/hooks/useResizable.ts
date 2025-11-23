@@ -3,7 +3,6 @@ import {
   CALC_MASK,
   DRAG_CLASS,
   ELEMENT_MASK,
-  EMITS,
   HANDLE_CLASS_PREFIX,
   HANDLES,
   type DisableAttr,
@@ -421,6 +420,3 @@ export function useResizable(props: any, emit: EmitFn, rootRef: Ref<HTMLElement 
     emitEvent,
   };
 }
-
-export type UseResizableReturn = ReturnType<typeof useResizable>;
-export { EMITS };

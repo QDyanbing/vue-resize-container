@@ -1,6 +1,5 @@
 import { isVue2, type App, type Plugin } from 'vue-demi';
 import ResizeContainer from './ResizeContainer';
-export type { ResizeDirection } from './ResizeContainer';
 
 type LegacyApp = { component: (name: string, component: any) => void };
 

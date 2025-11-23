@@ -14,7 +14,7 @@
     >
       <div class="file-view-modal">
         <div class="modal-header">
-          <span class="modal-title">{{ '文件预览' }}</span>
+          <span class="modal-title">拖拽触发区</span>
           <div class="modal-operate">
             <button link @click="open = false">关闭</button>
           </div>
@@ -44,7 +44,7 @@ const open = ref(false);
 
   .container {
     pointer-events: auto;
-    background: #fff;
+    background: #f60;
     border-radius: 8px;
   }
 

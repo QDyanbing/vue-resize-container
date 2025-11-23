@@ -10,8 +10,6 @@ import {
   type ResizeHandle,
 } from './utils/resizableConstants';
 
-export type ResizeDirection = 'horizontal' | 'vertical';
-
 export default defineComponent({
   name: 'VResizable',
   props: {
