@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  vue-demi:
+    specifier: ^0.14.10
+    version: 0.14.10(vue@3.5.24)
+
 devDependencies:
   '@commitlint/cli':
     specifier: ^20.1.0
@@ -104,9 +109,6 @@ devDependencies:
   vue:
     specifier: ^3.5.24
     version: 3.5.24(typescript@5.9.3)
-  vue-demi:
-    specifier: ^0.14.10
-    version: 0.14.10(vue@3.5.24)
   vue-eslint-parser:
     specifier: ^10.2.0
     version: 10.2.0(eslint@9.39.1)
@@ -388,7 +390,6 @@ packages:
         integrity: sha512-qMlSxKbpRlAridDExk92nSobyDdpPijUq2DW6oDnUqd0iOGxmQjyqhMIihI9+zv4LPyZdRje2cavWPbCbWm3eA==,
       }
     engines: { node: '>=6.9.0' }
-    dev: true
 
   /@babel/helper-validator-identifier@7.28.5:
     resolution:
@@ -396,7 +397,6 @@ packages:
         integrity: sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==,
       }
     engines: { node: '>=6.9.0' }
-    dev: true
 
   /@babel/parser@7.27.7:
     resolution:
@@ -418,7 +418,6 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.28.5
-    dev: true
 
   /@babel/template@7.27.2:
     resolution:
@@ -459,7 +458,6 @@ packages:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
-    dev: true
 
   /@cacheable/memory@2.0.5:
     resolution:
@@ -1913,7 +1911,6 @@ packages:
       {
         integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==,
       }
-    dev: true
 
   /@jridgewell/trace-mapping@0.3.31:
     resolution:
@@ -3290,7 +3287,6 @@ packages:
       entities: 4.5.0
       estree-walker: 2.0.2
       source-map-js: 1.2.1
-    dev: true
 
   /@vue/compiler-dom@3.5.24:
     resolution:
@@ -3300,7 +3296,6 @@ packages:
     dependencies:
       '@vue/compiler-core': 3.5.24
       '@vue/shared': 3.5.24
-    dev: true
 
   /@vue/compiler-sfc@3.5.24:
     resolution:
@@ -3317,7 +3312,6 @@ packages:
       magic-string: 0.30.21
       postcss: 8.5.6
       source-map-js: 1.2.1
-    dev: true
 
   /@vue/compiler-ssr@3.5.24:
     resolution:
@@ -3327,7 +3321,6 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.5.24
       '@vue/shared': 3.5.24
-    dev: true
 
   /@vue/compiler-vue2@2.7.16:
     resolution:
@@ -3429,7 +3422,6 @@ packages:
       }
     dependencies:
       '@vue/shared': 3.5.24
-    dev: true
 
   /@vue/runtime-core@3.5.24:
     resolution:
@@ -3439,7 +3431,6 @@ packages:
     dependencies:
       '@vue/reactivity': 3.5.24
       '@vue/shared': 3.5.24
-    dev: true
 
   /@vue/runtime-dom@3.5.24:
     resolution:
@@ -3451,7 +3442,6 @@ packages:
       '@vue/runtime-core': 3.5.24
       '@vue/shared': 3.5.24
       csstype: 3.2.3
-    dev: true
 
   /@vue/server-renderer@3.5.24(vue@3.5.24):
     resolution:
@@ -3464,14 +3454,12 @@ packages:
       '@vue/compiler-ssr': 3.5.24
       '@vue/shared': 3.5.24
       vue: 3.5.24(typescript@5.9.3)
-    dev: true
 
   /@vue/shared@3.5.24:
     resolution:
       {
         integrity: sha512-9cwHL2EsJBdi8NY22pngYYWzkTDhld6fAD6jlaeloNGciNSJL6bLpbxVgXl96X00Jtc6YWQv96YA/0sxex/k1A==,
       }
-    dev: true
 
   /@vueuse/core@12.8.2(typescript@5.9.3):
     resolution:
@@ -4618,7 +4606,6 @@ packages:
       {
         integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==,
       }
-    dev: true
 
   /dargs@8.1.0:
     resolution:
@@ -4896,7 +4883,6 @@ packages:
         integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==,
       }
     engines: { node: '>=0.12' }
-    dev: true
 
   /env-paths@2.2.1:
     resolution:
@@ -5479,7 +5465,6 @@ packages:
       {
         integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==,
       }
-    dev: true
 
   /esutils@2.0.3:
     resolution:
@@ -7367,7 +7352,6 @@ packages:
       }
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
-    dev: true
 
   /make-dir@2.1.0:
     resolution:
@@ -7717,7 +7701,6 @@ packages:
       }
     engines: { node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1 }
     hasBin: true
-    dev: true
 
   /natural-compare@1.4.0:
     resolution:
@@ -8269,7 +8252,6 @@ packages:
       {
         integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==,
       }
-    dev: true
 
   /picomatch@2.3.1:
     resolution:
@@ -8446,7 +8428,6 @@ packages:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
-    dev: true
 
   /preact@10.27.2:
     resolution:
@@ -9124,7 +9105,6 @@ packages:
         integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==,
       }
     engines: { node: '>=0.10.0' }
-    dev: true
 
   /source-map@0.6.1:
     resolution:
@@ -9767,7 +9747,6 @@ packages:
       }
     engines: { node: '>=14.17' }
     hasBin: true
-    dev: true
 
   /uc.micro@1.0.6:
     resolution:
@@ -10316,7 +10295,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.5.24(typescript@5.9.3)
-    dev: true
 
   /vue-eslint-parser@10.2.0(eslint@9.39.1):
     resolution:
@@ -10376,7 +10354,6 @@ packages:
       '@vue/server-renderer': 3.5.24(vue@3.5.24)
       '@vue/shared': 3.5.24
       typescript: 5.9.3
-    dev: true
 
   /when-exit@2.1.5:
     resolution:
