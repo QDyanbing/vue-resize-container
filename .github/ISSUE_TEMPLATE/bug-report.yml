@@ -1,0 +1,47 @@
+name: Bug 报告
+description: 反馈使用组件或文档时遇到的异常
+title: '[Bug]: '
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量完整填写以下信息，方便快速定位问题。
+  - type: input
+    id: version
+    attributes:
+      label: 组件版本
+      description: 例如 0.0.3
+      placeholder: 0.0.x
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 实际现象是什么？
+      placeholder: |
+        期望：...
+        实际：...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 请提供最小可复现 demo 或操作步骤
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 系统、浏览器、Node、包管理器等
+      placeholder: macOS 14 / Chrome 130 / Node 20 / pnpm 8
+    validations:
+      required: true
