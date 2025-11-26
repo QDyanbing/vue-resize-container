@@ -9,12 +9,18 @@ export default defineConfig(({ command }) => ({
   title: 'Vue Resize Container',
   description: '可同时支持 Vue 2/3 的拖拽缩放容器组件',
   themeConfig: {
-    nav: [{ text: '指南', link: '/guide/getting-started' }],
+    nav: [
+      { text: '指南', link: '/guide/getting-started' },
+      { text: '更新记录', link: '/guide/changelog' },
+    ],
     sidebar: {
       '/guide/': [
         {
           text: '指南',
-          items: [{ text: '快速开始', link: '/guide/getting-started' }],
+          items: [
+            { text: '快速开始', link: '/guide/getting-started' },
+            { text: '更新记录', link: '/guide/changelog' },
+          ],
         },
       ],
     },
