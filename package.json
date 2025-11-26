@@ -49,25 +49,27 @@
     "build": "pnpm clean && pnpm build:types && pnpm build:lib",
     "build:lib": "vite build",
     "build:types": "vue-tsc -p tsconfig.json --emitDeclarationOnly",
+    "changeset": "changeset",
     "clean": "rimraf \"dist/*\" \"types/*\"",
     "dev": "vitepress dev docs --host",
     "docs:build": "vitepress build docs",
     "docs:deploy": "pnpm docs:build && gh-pages -d docs/.vitepress/dist -b gh-pages -m \"docs: update\"",
-    "docs:preview": "cross-env DOCS_ENV=preview vitepress build docs && vitepress preview docs",
     "format": "prettier --cache --write .",
     "preinstall": "npx only-allow pnpm",
     "lint": "pnpm lint:eslint && pnpm lint:stylelint",
     "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx,.vue src --max-warnings=0 --no-error-on-unmatched-pattern",
     "lint:stylelint": "stylelint \"src/**/*.{css,scss,less,vue}\" --allow-empty-input",
     "prepare": "husky install",
-    "preview": "vite preview",
-    "release": "np --no-tests",
+    "preview": "cross-env DOCS_ENV=preview vitepress build docs && vitepress preview docs",
+    "release": "pnpm build && changeset publish && pnpm docs:deploy",
+    "release:prepare": "changeset version",
     "watch": "vite build --watch"
   },
   "dependencies": {
     "vue-demi": "^0.14.10"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@ruabick/md-demo-plugins": "^0.3.3",
@@ -86,7 +88,6 @@
     "husky": "^9.1.7",
     "less": "^4.4.2",
     "lint-staged": "^16.2.7",
-    "np": "^10.2.0",
     "postcss-html": "^1.8.0",
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.3.0",
@@ -112,9 +113,5 @@
   "volta": {
     "node": "22.14.0",
     "pnpm": "8.6.11"
-  },
-  "np": {
-    "branch": "master",
-    "publishRegistry": "https://registry.npmjs.org/"
   }
 }

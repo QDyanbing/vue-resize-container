@@ -10,6 +10,14 @@
 - 使用 Vite lib mode + `vite-plugin-dts` 构建，可产出 ES/CJS/UMD/IIFE 与类型定义。
 - 样式在运行时自动注入，安装组件后无需再单独引入 CSS。
 
+## 更新记录
+
+查看 [CHANGELOG](./CHANGELOG.md) 或文档站点的「更新记录」页面（`pnpm dev` 后访问 `/guide/changelog`）以获取每个版本的详细变更。
+
+## 贡献指南
+
+欢迎通过 Issue / PR 参与建设，请先阅读 [PR 最佳实践](./CONTRIBUTING.md)，按文档流程创建分支、补充 Changeset 与验证结果。
+
 ## 开发环境
 
 - Node 18+（项目使用 Volta 固定为 Node 22.14.0 / pnpm 8.6.11）
@@ -17,16 +25,16 @@
 
 常用脚本：
 
-| 命令                | 说明                                                    |
-| ------------------- | ------------------------------------------------------- |
-| `pnpm dev`          | 启动 VitePress 文档与 playground，实时预览组件          |
-| `pnpm watch`        | 监听 `src`，自动增量构建到 `dist`（开发外部项目时使用） |
-| `pnpm docs:build`   | 生成静态文档站（用于 GitHub Pages）                     |
-| `pnpm docs:preview` | 以本地 base 预览文档构建结果                            |
-| `pnpm build`        | 清理并产出 `dist` 与 `types`                            |
-| `pnpm preview`      | 本地预览打包后的 UMD/IIFE                               |
-| `pnpm release`      | 通过 `np` 执行 version bump、tag、发布 npm              |
-| `pnpm docs:deploy`  | 构建并推送文档到 `gh-pages`                             |
+| 命令                   | 说明                                                                   |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `pnpm dev`             | 启动 VitePress 文档与 playground，实时预览组件                         |
+| `pnpm watch`           | 监听 `src`，增量构建到 `dist`，便于在其他项目中本地调试                |
+| `pnpm docs:build`      | 仅构建文档站静态资源（`docs/.vitepress/dist`）                         |
+| `pnpm build`           | 清理并产出库的 `dist` 与 `types`                                       |
+| `pnpm preview`         | 以 `DOCS_ENV=preview` 构建并预览文档站（用于检查部署效果）             |
+| `pnpm release:prepare` | Changesets 聚合：生成版本号与 `CHANGELOG`，用于 release PR             |
+| `pnpm release`         | 构建、`changeset publish` 发布 npm、推送 tag，并串行执行 `docs:deploy` |
+| `pnpm docs:deploy`     | （被 `pnpm release` 调用）将最新文档推送到 `gh-pages`                  |
 
 ## 使用方式
 
@@ -59,11 +67,15 @@ Vue.component('ResizeContainer', ResizeContainer);
 
 完整的 Props、事件、示例可在 VitePress 文档查看：`pnpm dev` 访问 `http://localhost:4330`，或查看线上站点（GitHub Pages `gh-pages` 分支）。常用属性包括 `width`、`height`、`fit-parent`、`drag-selector`、`maximize`、`disable-attributes`，事件涵盖 `resize:*`、`drag:*`、`mount`、`destroy`、`maximize`。
 
-## 发布流程
+## 发布流程（Changesets）
 
-1. `pnpm build` + `pnpm lint` 确认组件通过检查。
-2. `pnpm release` 调用 `np`：自动跑测试（已关闭）、更新版本、打 tag、发布 npm（需先 `npm login` 官方 registry）。
-   - 发布命令固定在 `master` 分支执行，np 会推送 tag 并发布包。
-3. `pnpm docs:deploy` 将最新文档推送到 `gh-pages`，供 GitHub Pages 使用。
+1. 日常 PR 均需运行 `pnpm changeset`，按提示选择 patch/minor/major 并写一句描述，提交生成的 `.changeset/*.md`。
+2. 准备发版时，在 release 分支执行 `pnpm release:prepare`（即 `changeset version`）：
+   - 汇总所有待发布的 changeset；
+   - 更新 `package.json` 版本号及 `CHANGELOG.md`。将这些改动通过 release PR 合入 `master`。
+3. 在最新 `master` 上执行 `pnpm release`，它会：
+   - 运行 `pnpm build`；
+   - 使用 `changeset publish` 发布 npm 包并推送 `vX.Y.Z` tag；
+   - 自动调用 `pnpm docs:deploy` 同步文档。
 
-> 若需要自定义 registry，可在 `.npmrc` 中修改，再重新登录。
+> 发布前请确保已在目标 registry 完成 `npm login`。如需切换 registry，可编辑 `.npmrc` 后重新登录。
