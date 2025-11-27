@@ -50,6 +50,7 @@
     "build:lib": "vite build",
     "build:types": "vue-tsc -p tsconfig.json --emitDeclarationOnly",
     "changeset": "changeset",
+    "ci": "pnpm lint && pnpm build",
     "clean": "rimraf \"dist/*\" \"types/*\"",
     "dev": "vitepress dev docs --host",
     "docs:build": "vitepress build docs",
