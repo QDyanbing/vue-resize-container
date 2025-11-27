@@ -61,7 +61,7 @@
     "lint:stylelint": "stylelint \"src/**/*.{css,scss,less,vue}\" --allow-empty-input",
     "prepare": "husky install",
     "preview": "cross-env DOCS_ENV=preview vitepress build docs && vitepress preview docs",
-    "release": "pnpm build && changeset publish && pnpm docs:deploy",
+    "release": "pnpm build && changeset publish && git push origin master --follow-tags && pnpm docs:deploy",
     "release:prepare": "changeset version",
     "watch": "vite build --watch"
   },
