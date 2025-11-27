@@ -50,6 +50,7 @@
     "build:lib": "vite build",
     "build:types": "vue-tsc -p tsconfig.json --emitDeclarationOnly",
     "changeset": "changeset",
+    "ci": "pnpm lint && pnpm build",
     "clean": "rimraf \"dist/*\" \"types/*\"",
     "dev": "vitepress dev docs --host",
     "docs:build": "vitepress build docs",
@@ -61,7 +62,7 @@
     "lint:stylelint": "stylelint \"src/**/*.{css,scss,less,vue}\" --allow-empty-input",
     "prepare": "husky install",
     "preview": "cross-env DOCS_ENV=preview vitepress build docs && vitepress preview docs",
-    "release": "pnpm build && changeset publish && pnpm docs:deploy",
+    "release": "pnpm build && changeset publish && git push origin master --follow-tags && pnpm docs:deploy",
     "release:prepare": "changeset version",
     "watch": "vite build --watch"
   },
